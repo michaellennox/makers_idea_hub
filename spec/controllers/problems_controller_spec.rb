@@ -4,4 +4,8 @@ RSpec.describe ProblemsController, type: :controller do
   describe '#index' do
     it { is_expected.to respond_to(:index) }
   end
+
+  describe '#create' do
+    it { is_expected.to respond_to(:create) }
+  end
 end
