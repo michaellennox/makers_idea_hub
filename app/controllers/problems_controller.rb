@@ -6,4 +6,9 @@ class ProblemsController < ApplicationController
   def create
   end
 
+  def show
+  end
+
+  def put
+  end
 end
