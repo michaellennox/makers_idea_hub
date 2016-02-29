@@ -34,6 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :test do
+  gem 'coveralls'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
