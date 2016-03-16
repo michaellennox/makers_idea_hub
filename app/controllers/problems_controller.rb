@@ -1,14 +1,21 @@
 class ProblemsController < ApplicationController
-
   def index
+    @problem = Problem.new
+    @problems = Problem.all
   end
 
   def create
+    @problem = Problem.new(problem_params)
+    if @problem.save
+      redirect_to problems_path
+    else
+      render 'index'
+    end
   end
 
-  def show
-  end
+  private
 
-  def put
+  def problem_params
+    params.require(:problem).permit(:title, :description)
   end
 end
