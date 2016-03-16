@@ -12,10 +12,10 @@ feature 'Problems Features.' do
         visit '/problems'
       end
 
-      scenario 'The user should see a list of problem titles' do
+      scenario 'Then user should see a list of problem links' do
         within 'ul#problems' do
-          expect(page).to have_content 'A Big Big Problem'
-          expect(page).to have_content 'A Teeny Tiny Problem'
+          expect(page).to have_link 'A Big Big Problem'
+          expect(page).to have_link 'A Teeny Tiny Problem'
         end
       end
     end

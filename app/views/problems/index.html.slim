@@ -1,0 +1,4 @@
+h1 Problems
+ul#problems
+  - @problems.each do |problem|
+    = link_to problem.title, problem_path(problem)
