@@ -1,4 +1,15 @@
 h1 Problems
+
+= form_for @problem do |f|
+  = f.label :title, "What's your problem?"
+  = f.text_field :title
+  
+  = f.label :description, "Tell me more!"
+  = f.text_area :description
+  
+  = f.submit
+
+
 ul#problems
   - @problems.each do |problem|
     = link_to problem.title, problem_path(problem)

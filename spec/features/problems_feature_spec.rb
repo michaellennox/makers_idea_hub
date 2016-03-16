@@ -18,6 +18,17 @@ feature 'Problems Features.' do
           expect(page).to have_link 'A Teeny Tiny Problem'
         end
       end
+
+      scenario 'Then user should be able to create a new problem' do
+        within 'form.new_problem' do
+          fill_in 'problem_title', with: 'A New Problem'
+          fill_in 'problem_description', with: 'A beautiful description'
+          click_button 'Create Problem'
+        end
+        within 'ul#problems' do
+          expect(page).to have_link 'A New Problem'
+        end
+      end
     end
   end
 end
