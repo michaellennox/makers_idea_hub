@@ -4,7 +4,8 @@ feature 'Solutions Features.' do
   context 'Given the database contains some solutions.' do
     let!(:problem) { FactoryGirl.create(:problem) }
     before :each do
-      FactoryGirl.create(:solution, title: 'A great idea', problem: problem)
+      FactoryGirl.create(:solution, title: 'A great idea', problem: problem,
+                         description: 'A thrilling description')
       FactoryGirl.create(:solution, title: 'Another epic idea', problem: problem)
     end
 
@@ -29,6 +30,21 @@ feature 'Solutions Features.' do
         expect(current_path).to eq problem_path(problem)
         within 'ul#solutions' do
           expect(page).to have_link 'My lovely solution'
+        end
+      end
+    end
+
+    context 'When a user has clicked through to a specific solution' do
+      before :each do
+        visit problem_path(problem)
+        click_link 'A great idea'
+      end
+
+      scenario 'Then user should see details for that solution' do
+        within 'section#solution' do
+          expect(page).to have_content problem.title
+          expect(page).to have_content 'A great idea'
+          expect(page).to have_content 'A thrilling description'
         end
       end
     end
