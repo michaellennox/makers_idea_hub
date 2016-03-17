@@ -9,6 +9,10 @@ class SolutionsController < ApplicationController
     end
   end
 
+  def show
+    @solution = Solution.find(params[:id])
+  end
+
   private
 
   def solution_params
