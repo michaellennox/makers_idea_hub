@@ -3,16 +3,14 @@ require 'rails_helper'
 feature 'Problems Features.' do
   context 'Given the database contains some problems.' do
     before :each do
-      problem = FactoryGirl.create(:problem, title: 'A Big Big Problem',
+      FactoryGirl.create(:problem, title: 'A Big Big Problem',
                                    description: 'A brilliant description')
       FactoryGirl.create(:problem, title: 'A Teeny Tiny Problem')
-      FactoryGirl.create(:solution, title: 'A great idea', problem: problem)
-      FactoryGirl.create(:solution, title: 'Another epic idea', problem: problem)
     end
 
     context 'When a user has visited the problems page.' do
       before :each do
-        visit '/problems'
+        visit problems_path
       end
 
       scenario 'Then user should see a list of problem links' do
@@ -28,6 +26,7 @@ feature 'Problems Features.' do
           fill_in 'problem_description', with: 'A beautiful description'
           click_button 'Create Problem'
         end
+        expect(current_path).to eq problems_path
         within 'ul#problems' do
           expect(page).to have_link 'A New Problem'
         end
@@ -36,7 +35,7 @@ feature 'Problems Features.' do
 
     context 'When a user has clicked through to a specific problem.' do
       before :each do
-        visit '/problems'
+        visit problems_path
         click_link 'A Big Big Problem'
       end
 
@@ -44,13 +43,6 @@ feature 'Problems Features.' do
         within 'section#problem' do
           expect(page).to have_content 'A Big Big Problem'
           expect(page).to have_content 'A brilliant description'
-        end
-      end
-
-      scenario 'Then the user should see links to the suggested solutions' do
-        within 'ul#solutions' do
-          expect(page).to have_link 'A great idea'
-          expect(page).to have_link 'Another epic idea'
         end
       end
     end
