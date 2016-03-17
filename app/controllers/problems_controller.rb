@@ -5,6 +5,7 @@ class ProblemsController < ApplicationController
   end
 
   def show
+    @solution = Solution.new
     @problem = Problem.find(params[:id])
   end
 

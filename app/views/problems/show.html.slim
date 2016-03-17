@@ -2,6 +2,15 @@ section#problem
   h2= @problem.title
   p= @problem.description
   
+= form_for [@problem, @solution] do |f|
+  = f.label :title, "Got an idea to solve this?"
+  = f.text_field :title
+  
+  = f.label :description, "Tell me more!"
+  = f.text_area :description
+  
+  = f.submit
+  
 ul#solutions
   - @problem.solutions.each do |solution|
     = link_to solution.title, solution_path(solution)
