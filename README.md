@@ -1,4 +1,4 @@
-Makers Idea Hub [![Build Status](https://travis-ci.org/michaellennox/makers_idea_hub.svg?branch=master)](https://travis-ci.org/michaellennox/makers_idea_hub.svg?branch=master) [![Coverage Status](https://coveralls.io/repos/github/michaellennox/makers_idea_hub/badge.svg?branch=master)](https://coveralls.io/github/giamir/makers_idea_hub?branch=master)
+Makers Idea Hub [![Build Status](https://travis-ci.org/michaellennox/makers_idea_hub.svg?branch=master)](https://travis-ci.org/michaellennox/makers_idea_hub.svg?branch=development) [![Coverage Status](https://coveralls.io/repos/github/michaellennox/makers_idea_hub/badge.svg?branch=development)](https://coveralls.io/github/giamir/makers_idea_hub?branch=development)
 =================
 
 Installation
@@ -16,7 +16,7 @@ Visit: [http://localhost:3000](http://localhost:3000) on your machine.
 
 Technologies
 -------------
-Builded with:
+Built with:
 - Ruby on Rails
 - Postgres
 
