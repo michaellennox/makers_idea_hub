@@ -1,0 +1,7 @@
+section#problem
+  h2= @problem.title
+  p= @problem.description
+  
+ul#solutions
+  - @problem.solutions.each do |solution|
+    = link_to solution.title, solution_path(solution)
