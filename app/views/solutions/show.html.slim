@@ -2,3 +2,7 @@ section#solution
   h2= @solution.problem.title
   h3= @solution.title
   p= @solution.description
+
+ul#replies
+  - @solution.replies.each do |reply|
+    p= reply.body
