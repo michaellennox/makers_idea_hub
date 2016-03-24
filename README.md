@@ -1,4 +1,4 @@
-Makers Idea Hub [![Build Status](https://travis-ci.org/michaellennox/makers_idea_hub.svg?branch=master)](https://travis-ci.org/michaellennox/makers_idea_hub.svg?branch=development) [![Coverage Status](https://coveralls.io/repos/github/michaellennox/makers_idea_hub/badge.svg?branch=development)](https://coveralls.io/github/giamir/makers_idea_hub?branch=development)
+Makers Idea Hub [![Build Status](https://travis-ci.org/michaellennox/makers_idea_hub.svg?branch=development)](https://travis-ci.org/michaellennox/makers_idea_hub.svg?branch=development) [![Coverage Status](https://coveralls.io/repos/github/michaellennox/makers_idea_hub/badge.svg?branch=development)](https://coveralls.io/github/giamir/makers_idea_hub?branch=development)
 =================
 
 Installation
