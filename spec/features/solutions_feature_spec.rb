@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-feature 'Solutions Features.' do
-  context 'Given the database contains some solutions.' do
+feature 'Solutions Features' do
+  context 'Given the database contains some solutions' do
     let!(:problem) { FactoryGirl.create(:problem) }
     before :each do
       FactoryGirl.create(:solution, title: 'A great idea', problem: problem,
@@ -9,7 +9,7 @@ feature 'Solutions Features.' do
       FactoryGirl.create(:solution, title: 'Another epic idea', problem: problem)
     end
 
-    context 'When a user is on the problem page with solutions.' do
+    context 'When a user is on the problem page with solutions' do
       before :each do
         visit problem_path(problem)
       end

@@ -1,14 +1,14 @@
 require 'rails_helper'
 
-feature 'Problems Features.' do
-  context 'Given the database contains some problems.' do
+feature 'Problems Features' do
+  context 'Given the database contains some problems' do
     before :each do
       FactoryGirl.create(:problem, title: 'A Big Big Problem',
                                    description: 'A brilliant description')
       FactoryGirl.create(:problem, title: 'A Teeny Tiny Problem')
     end
 
-    context 'When a user has visited the problems page.' do
+    context 'When a user has visited the problems page' do
       before :each do
         visit problems_path
       end
@@ -33,7 +33,7 @@ feature 'Problems Features.' do
       end
     end
 
-    context 'When a user has clicked through to a specific problem.' do
+    context 'When a user has clicked through to a specific problem' do
       before :each do
         visit problems_path
         click_link 'A Big Big Problem'
