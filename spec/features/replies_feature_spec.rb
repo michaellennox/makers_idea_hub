@@ -27,7 +27,7 @@ feature 'Replies Features' do
         end
         expect(current_path).to eq solution_path(solution)
         within 'ul#replies' do
-          expect(page).to have_conten 'I also think cookies are the answer'
+          expect(page).to have_content 'I also think cookies are the answer'
         end
       end
     end

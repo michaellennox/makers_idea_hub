@@ -10,6 +10,7 @@ class SolutionsController < ApplicationController
   end
 
   def show
+    @reply = Reply.new
     @solution = Solution.find(params[:id])
   end
 

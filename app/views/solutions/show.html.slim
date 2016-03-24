@@ -3,6 +3,12 @@ section#solution
   h3= @solution.title
   p= @solution.description
 
+= form_for [@solution, @reply] do |f|
+  = f.label :body, "Talk to me!"
+  = f.text_area :body
+  
+  = f.submit
+    
 ul#replies
   - @solution.replies.each do |reply|
     p= reply.body
